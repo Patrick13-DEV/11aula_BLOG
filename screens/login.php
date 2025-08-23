@@ -1,44 +1,15 @@
 <?php
-
-
-
-
-
-
-
+include_once("../constante.php");
+include_once("../includes/header.php");
 
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../assets/css/signin.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-    <title>Blog - login</title>
-</head>
-
-<body class="tetx-center">
-
-    <main class="form-signin">
-        <form action="" method="post">
+<div class="d-flex justify-content-center mt-5">
+    <main class=" w-25 form-signin">
+        <form action="<?= ROOT_PATH ?>src/loginUsuario.php" method="post">
             <h1 class="h3 mb-3 fw-normal"> Logar Senac - Blog</h1>
 
-
-
-            <div class=" form-floating">
-                <input type="text"
-                    class="form-control"
-                    placeholder="Nome"
-                    name="txtNome"
-                    id="floatingNome">
-                <label for="floatingNome">Nome</label>
-            </div>
-
-
-            <div class=" form-floating">
+            <div class="  form-floating">
                 <input type="email"
                     class="form-control"
                     placeholder="name@email.com"
@@ -47,25 +18,32 @@
                 <label for="floatingEmail">Email</label>
             </div>
 
-            <div class=" form-floating">
+            <div class="  form-floating">
                 <input
-                    type="text"
+                    type="password"
                     class="form-control"
                     placeholder="*****"
                     name="txtSenha"
                     id="floatingSenha">
+                    <i id="olho" class="bi bi-eye"></i>
                 <label for="floatingSenha">Senha</label>
             </div>
 
-            <button type="submit" class="w-100 btn btn-lg btn-primary mb-2">Cadastrar</button>
+            <button type="submit" class="w-100 btn btn-lg btn-primary  mt-3 mb-2">Logar</button>
         </form>
-        <a class="link -6" aria-current="page" href="./cadastrar.php">Ja tenho o cadastro</a>
-        <p class=" mt-5 mb-3 text-muted"> &copy; Turma 202400005 2025</p>
 
+        <div>
+            <?php if (isset($mensagem)) { ?>
+                <p class="alert <?= $cor ?> mt-2"><?= $mensagem ?></p>
+            <?php } ?>
+        </div>
 
+        <a class="link -6" aria-current="page" href="<?= ROOT_PATH ?>./screens/cadastrar.php">Ja tenho o cadastro</a>
 
     </main>
-</body>
-
+</div>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+<?php
+include_once("../includes/footer.php")
+?>

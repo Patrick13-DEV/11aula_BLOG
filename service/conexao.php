@@ -19,7 +19,4 @@ try {
     
 
 
-define('ROOT_PATH','http:http://172.17.34.253:1200/projetos/202400005/PHP/patrick/11aula_BLOG/');
-
-
 ?>

@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $updatePerfil->bindParam(":idUserUpdate", $idUserUpdate);
         $updatePerfil->bindParam(":nomeUpdate", $nomeUpdate);
         $updatePerfil->bindParam(":emailUpdate", $emailUpdate);
-
         if ($updatePerfil->execute()) {
             $_SESSION['mensagem'] = "Atualizado com sucesso";
             $_SESSION['cor'] = 'alert-success';

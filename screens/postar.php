@@ -92,7 +92,7 @@ unset($conexao);
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <a href="<?= ROOT_PATH ?>src/excluirPost.php?id=<?=htmlspecialchars( $post["ID_POST"]) ?>" class="btn btn-danger">Excluir</a>
+                                <a href="<?= ROOT_PATH ?>src/deletePost.php?id=<?=htmlspecialchars( $post["ID_POST"]) ?>" class="btn btn-danger">Excluir</a>
                             </div>
                         </div>
                     </div>

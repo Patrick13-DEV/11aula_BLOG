@@ -47,9 +47,7 @@ unset($conexao);
 
 ##------------------------------------
 
-
 ?>
-
  <main class="container mt-5">
 
         <a class="btn btn-success mb-4" role="button" href="<?= ROOT_PATH ?>screens/criarPost.php"><i class="bi bi-plus-circle-fill"></i> Criar Novo Post</a>

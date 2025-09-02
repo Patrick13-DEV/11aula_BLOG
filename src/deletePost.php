@@ -6,7 +6,6 @@ include_once("../service/auth.php");
 if($_SERVER['REQUEST_METHOD'] == "GET"){
     $postagemId = filter_input(INPUT_GET, "id", FILTER_SANITIZE_SPECIAL_CHARS);
     try {
-        
         $sql = "SELECT IMAGEM FROM posts WHERE ID_POST = :postagemId";
         $select = $conexao->prepare($sql);
         $select->bindParam(":postagemId", $postagemId);

@@ -1,6 +1,4 @@
 <?php 
-
-
 include_once("../constante.php");
 session_start();
 session_destroy();
